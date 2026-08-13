@@ -44,7 +44,8 @@
   .node{position:absolute;width:120px;height:120px;border-radius:50%;border:2px solid rgba(255,255,255,0.4);background:rgba(255,255,255,0.05);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;cursor:pointer;transition:all .25s;z-index:2;}
   .node:hover, .node:focus-visible{background:var(--accent);border-color:#fff;transform:scale(1.05);}
   .node .num{position:absolute;top:10px;left:14px;font-size:12px;color:var(--muted);background:rgba(0,0,0,.3);border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;}
-  .node .icon{font-size:26px;margin-bottom:4px;}
+  .node .icon{font-size:22px;margin-bottom:4px;}
+  .node .logo-chip{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff;margin-bottom:6px;letter-spacing:.3px;}
   .node .label{font-weight:700;font-size:11px;letter-spacing:.2px;padding:0 8px;line-height:1.25;}
 
   /* Popover overlay */
@@ -102,7 +103,7 @@
   .why-card h4{margin:0 0 14px;font-size:18px;}
   .why-card p{color:var(--muted);font-size:14px;line-height:1.7;margin:0 0 22px;}
   .why-card .cta-row{margin-top:0;}
-  .site-footer{text-align:left;color:var(--muted);font-size:13px;padding:32px 0 8px;}
+  .site-footer{text-align:center;color:var(--muted);font-size:13px;padding:32px 0 8px;}
 </style>
 </head>
 <body>
@@ -154,22 +155,39 @@
 
 <section id="storytelling">
   <div class="container">
-    <h2>📖 Repenser le fil narratif</h2>
-    <p class="lead">Le persona "Julie et son appartement" a déjà été vu en mai — on change d'angle plutôt que de le décliner. Trois pistes à challenger en équipe :</p>
-    <div class="grid3">
-      <div class="card">
-        <h4>1. Mission Control</h4>
-        <p>Une salle de crise transverse : les 6 ateliers sont 6 "missions" reçues par une cellule de crise fictive (ex : une collectivité qui doit gérer un évènement — canicule, afflux migratoire, incident cyber). Chaque atelier résout un aspect de la crise avec sa techno.</p>
+    <h2>📖 Le fil narratif : le voyage de Jeanne</h2>
+    <p class="lead">Fini le persona "Julie et son appartement" vu en mai. Notre nouveau fil rouge suit <strong>Jeanne</strong>, étudiante en échange universitaire à l'étranger, qui vient de perdre ses papiers d'identité. Chaque atelier résout une étape concrète de sa situation — dans l'ordre du parcours de l'après-midi — et montre comment les solutions Salesforce s'articulent entre elles pour apporter une vraie valeur au quotidien.</p>
+
+    <div class="timeline">
+      <div class="step">
+        <h4>1. Agentforce — Déclarer la perte, tout de suite, sans attendre</h4>
+        <p>Perdue dans une ville qu'elle ne connaît pas, Jeanne ouvre l'agent conversationnel du consulat. Disponible 24h/24 et dans sa langue, Agentforce la guide pas à pas pour déclarer la perte de ses papiers et lance immédiatement sa demande de réémission — sans file d'attente ni formulaire papier.</p>
       </div>
-      <div class="card">
-        <h4>2. La ville en 24h</h4>
-        <p>Une frise chronologique d'une journée type dans une collectivité : chaque atelier illustre une heure de la journée où la techno intervient (matin, midi, soir, nuit).</p>
+      <div class="step">
+        <h4>2. Marketing Cloud / Data 360 — Être accompagnée, pas noyée sous des messages génériques</h4>
+        <p>Grâce à Data 360, l'administration dispose déjà d'une vision unifiée de Jeanne (statut étudiant, programme d'échange, pays d'origine). Marketing Cloud s'appuie sur ce profil pour lui envoyer, sur son canal préféré, des rappels ciblés et une checklist claire des documents à fournir — au bon moment, sans spam.</p>
       </div>
-      <div class="card">
-        <h4>3. Le dossier citoyen</h4>
-        <p>Un même dossier citoyen traverse les 6 ateliers, enrichi à chaque étape par une techno différente — de la demande initiale jusqu'à la résolution complète.</p>
+      <div class="step">
+        <h4>3. Mulesoft — Ne plus jamais redonner la même information deux fois</h4>
+        <p>En coulisses, Mulesoft connecte le système du consulat, celui de l'université d'accueil et le registre national d'identité. Le dossier de Jeanne circule instantanément entre ces organismes : elle n'a plus à ressaisir trois fois les mêmes justificatifs.</p>
+      </div>
+      <div class="step">
+        <h4>4. Tableau — Anticiper la prochaine Jeanne avant qu'elle n'arrive</h4>
+        <p>Au niveau régional, des tableaux de bord agrègent les cas similaires (pertes de documents par nationalité, par université partenaire, par période). L'administration repère ainsi les pics prévisibles — comme la rentrée universitaire — et renforce ses équipes d'accueil en amont.</p>
+      </div>
+      <div class="step">
+        <h4>5. Slack / Education — Faire collaborer les bons interlocuteurs, tout de suite</h4>
+        <p>Côté université, le bureau des relations internationales utilise Slack pour ouvrir automatiquement un canal dédié au dossier de Jeanne, reliant en temps réel le consulat, le logement étudiant et son coordinateur d'échange — elle n'est plus ballottée entre services qui ne se parlent pas.</p>
+      </div>
+      <div class="step">
+        <h4>6. NGO — Un filet de sécurité pendant l'attente</h4>
+        <p>Le temps que ses nouveaux papiers arrivent, Jeanne peut avoir besoin d'un hébergement temporaire ou d'une aide financière d'urgence. Une association partenaire, connectée au même environnement Salesforce, est notifiée automatiquement dès l'ouverture du dossier et peut intervenir sans délai.</p>
       </div>
     </div>
+
+    <p class="lead" style="margin-top:24px;">
+      Résultat : une histoire simple et réaliste, où chaque atelier apporte une brique concrète — et où l'enchaînement des 6 technologies illustre, mieux qu'un discours produit, la valeur d'un écosystème Salesforce connecté de bout en bout.
+    </p>
   </div>
 </section>
 
@@ -279,7 +297,7 @@ ateliers.forEach((a, i) => {
   const pos = positions[i % positions.length];
   node.style.left = pos.x + '%';
   node.style.top = pos.y + '%';
-  node.innerHTML = `<span class="num">${i+1}</span><span class="icon">${a.icon}</span><span class="label">${a.label}</span>`;
+  node.innerHTML = `<span class="num">${i+1}</span><span class="logo-chip" style="background:${a.color}">${a.badge}</span><span class="label">${a.label}</span>`;
   node.addEventListener('click', () => openPopover(a.id));
   node.addEventListener('keypress', (e) => { if(e.key === 'Enter') openPopover(a.id); });
   nodesContainer.appendChild(node);
